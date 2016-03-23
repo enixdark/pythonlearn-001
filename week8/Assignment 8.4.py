@@ -7,11 +7,18 @@ You can download the sample data at http://www.pythonlearn.com/code/romeo.txt
 #['Arise', 'But', 'It', 'Juliet', 'Who', 'already', 'and', 'breaks', 'east', 'envious', #'fair', 'grief', 'is', 'kill', 'light', 'moon', 'pale', 'sick', 'soft', 'sun', 'the', #'through', 'what', 'window', 'with', 'yonder']
 
 fname = raw_input("Enter file name: ")
+if len(fname) == 0:
+    fname = 'romeo.txt'   
 fh = open(fname)
 lst = list()
+# Iterates through each line in filehandle
 for line in fh:
+    #Iterates through each word on line
     for i in line.split():
-        lst.append(i)
+        #Checks to see if word is already in list
+        if not i in lst:
+            #Appends words to list
+            lst.append(i)
+        
 lst.sort()
-print list(set(lst))
-
+print lst
