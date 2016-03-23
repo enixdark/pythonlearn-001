@@ -11,17 +11,19 @@ You can download the sample data at http://www.pythonlearn.com/code/mbox-short.t
 #output:
 #Average spam confidence: 0.750718518519
 
+# Updated assignment asks users to not use sum() function or variable name in their solution
 # Use the file name mbox-short.txt as the file name
 fname = raw_input("Enter file name: ")
+if len(fname) == 0:
+    fname = 'mbox-short.txt'
 fh = open(fname)
-l = []
+count = 0
+tot = 0
+ans = 0
 for line in fh:
     if not line.startswith("X-DSPAM-Confidence:") : continue
-    ll = line.split()
-    for i in ll:
-        try:
-            u = float(i)
-            l.append(u)
-        except:
-            pass
-print "Average spam confidence:",sum(l)/len(l)
+    count = count + 1
+    num = float(line[21:])
+    tot = num + tot
+ans = tot / count
+print "Average spam confidence:", ans
