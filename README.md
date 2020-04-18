@@ -1,11 +1,11 @@
-##pythonlearn-001
+## pythonlearn-001
 ===============
 
-###Programming for Everybody (Python) by Charles Severance
+### Programming for Everybody (Python) by Charles Severance
 The Course use TextBook 
 Python for Informatics: Exploring Information by Dr. Charles R Severance for learning 
 ,so all exsercise/assignment from Course based on The Text
-##Syllabus Help
+## Syllabus Help
 ===============
 Week One: Introduction - Why we program?
 
