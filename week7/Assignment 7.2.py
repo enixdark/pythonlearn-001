@@ -25,5 +25,8 @@ for line in fh:
     count = count + 1
     num = float(line[21:])
     tot = num + tot
-ans = tot / count
-print "Average spam confidence:", ans
+try:
+    ans = tot / count
+except:
+    ans=0.0
+print ("Average spam confidence:", ans)
