@@ -8,19 +8,19 @@
 #Maximum is 7
 #Minimum is 4
 
-largest = None
-smallest = None
+l = None
+s = None
 while True:
     try:
-        num = raw_input("Enter a number: ")
-        if num == 'done':
+        n = input("Enter a number: ")
+        if n == 'done':
             break;
-        n = int(num)
-        largest = num if largest<num or largest == None else largest
-        smallest = num if smallest>num or smallest == None else smallest
+        n1 = int(num)
+        l = n if l<n or l == None else l
+        s= n if s>n or s == None else s
     except:
-        print "Invalid input"
-    #print num
+        print("Invalid input")
+    #print n
 
-print "Maximum is", largest
-print "Minimum is", smallest
+print "Maximum is", l
+print "Minimum is", s
