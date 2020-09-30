@@ -11,16 +11,18 @@ def computepay(h,r):
     if h < 0 or r < 0:
         return None
     elif h > 40:
-        return (40*r+(h-40)*1.5*r)
+        k = (40*r)+(h-40)*1.5*r)
+        return k
     else:
-        return (h*r)
+        l = h*r
+        return l
     
 try:
-    hrs = raw_input("Enter Hours:")
+    hrs = input("Enter Hours:")
     hour = float(hrs)
-    r = raw_input("please input your rate:")
+    r = input("please input your rate:")
     rate = float(r)
     p = computepay(hour,rate)
-    print p
+    print(p)
 except:
-    print "Please,input your numberic"
+    print("Please,input your numberic")
