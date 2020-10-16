@@ -34,6 +34,5 @@ You can download the sample data at http://www.pythonlearn.com/code/words.txt
 # Use words.txt as the file name
 fname = raw_input("Enter file name: ")
 fh = open(fname)
-for i in fh:
-    i = i.rstrip().upper()
-    print i
+for line in fh.readlines():
+    print(line.upper().strip())
