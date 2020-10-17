@@ -12,16 +12,18 @@ You can download the sample data at http://www.pythonlearn.com/code/mbox-short.t
 #Average spam confidence: 0.750718518519
 
 # Use the file name mbox-short.txt as the file name
-fname = raw_input("Enter file name: ")
+fname = input("Enter file name: ")
 fh = open(fname)
-l = []
+c = 0
+lst = []
+total = 0.0
 for line in fh:
     if not line.startswith("X-DSPAM-Confidence:") : continue
-    ll = line.split()
-    for i in ll:
-        try:
-            u = float(i)
-            l.append(u)
-        except:
-            pass
-print "Average spam confidence:",sum(l)/len(l)
+    f = (line.split())
+    c+=1
+    lst.append(f[1])
+    
+for i in lst:
+    total +=float(i)
+
+print("Average spam confidence:",total/len(lst))
